@@ -16,8 +16,8 @@ import accountRoute from "./src/routes/account.js"
 
 
 
-// const __filename = fileURLToPath(import.meta.url);
-// const __dirname = path.dirname(__filename);
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const SERVER_PORT = process.env.SERVER_PORT || 3001;
@@ -27,10 +27,10 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(bodyParser.urlencoded({ limit: "10mb", extended: false }));
 
-// app.use(express.static(path.resolve(__dirname, '../client/dist')));
+app.use(express.static(path.resolve(__dirname, '../client/dist')));
 
 // use routers
-// app.use('/', indexRouter);
+app.use('/', indexRouter);
 app.use('/api/users', userRouter); 
 app.use('/api/products', productRouter);
 app.use('/api/supportBot', supportBotRouter)
