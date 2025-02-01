@@ -1,0 +1,23 @@
+{
+  "name": "poppedparamount",
+  "version": "1.0.0",
+  "description": "[![NPM Version][npm-image]][npm-url]\r [![Build Status][travis-image]][travis-url]\r [![Downloads Stats][npm-downloads]][npm-url]",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd client npm run build cd ..",
+    "start": "cd server npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YVictorin/PoppedParamount.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/YVictorin/PoppedParamount/issues"
+  },
+  "homepage": "https://github.com/YVictorin/PoppedParamount#readme"
+}

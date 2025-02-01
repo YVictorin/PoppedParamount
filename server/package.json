@@ -4,8 +4,8 @@
   "type": "module",
   "main": "server.js",
   "scripts": {
-    "build": "set NODE_ENV=development && npm install --production=false && cd .. && cd client npm install",
-    "start": "node --watch --experimental-sqlite --env-file=.env server.js"
+    "build": "cd .. && cd client npm install",
+    "devStart": "node --watch --experimental-sqlite --env-file=.env server.js"
   },
   "keywords": [],
   "author": "",
