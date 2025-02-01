@@ -1,5 +1,12 @@
 {
   "installCommand": "npm install --legacy-peer-deps",
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "/client/dist/index.html",
+      "statusCode": 200
+    }
+  ],
   "version": 2,
   "routes": [
     { "src": "/(.*)", "dest": "/server.js" }
