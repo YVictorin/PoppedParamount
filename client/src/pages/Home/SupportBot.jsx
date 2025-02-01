@@ -3,25 +3,12 @@ import { X, Minus } from 'lucide-react';
 import SupportTextBox from "./SupportTextBox";
 import useFetchData from "../../hooks/useFetchData"
 import { useOutletContext } from "react-router-dom"
+import { apiEndpoints } from "../../utils/apiEndpoints";
 
 export default function SupportBot(){
+    const [ data , , , , , setPostedData] = useFetchData({ url: apiEndpoints.SUPPORT_BOT, method: "POST" });
     const { isMobile } = useOutletContext()
 
-    const isLocal = window.location.hostname === 'localhost';
-    const URLS = {
-        SUPPORT_BOT: isLocal ? "http://localhost:5000/supportBot" : `${process.env.REACT_APP_API_URL}/supportBot`,
-    };
-    
-
-      const [ 
-        data, 
-        isLoading, 
-        isError, 
-        error, 
-        postedData, 
-        setPostedData
-    ] = useFetchData({ url: URLS.SUPPORT_BOT, method: "POST" });
-    
 
     const [isOpen, setIsOpen] = useState(false);
     const [userMsg, setUserMsg] = useState("");

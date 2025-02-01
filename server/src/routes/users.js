@@ -26,28 +26,5 @@ router
     }
   });
 
-// Route to handle user login
-router.post('/login', async (req, res) => {
-
-  // Find user by email
-  const user = await User.find(req.body.email)
-
-  if (!user) {
-    return res.status(400).send("Cannot find user.");
-  }
-
-  try {
-    // bcrypt.compare prevents timing attacks
-    const isMatch = await bcrypt.compare(req.body.password, user.password);
-    if (isMatch) {
-      res.send("Success.");  
-    } else {
-      res.status(401).send("Not allowed.");  
-    }
-  } catch (e) {
-    console.error(e);
-    res.status(500).send("There was a server issue comparing user. " + e);
-  }
-});
 
 export default router;

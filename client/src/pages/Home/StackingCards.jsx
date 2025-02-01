@@ -1,6 +1,4 @@
-import Container from "react-bootstrap/Container";
-import InfoSection from "./InfoSection"
-
+import SliderSection from "./SliderSection"
 
 const StackingCards = () => {
     return (
@@ -39,7 +37,7 @@ const StackingCards = () => {
             </div>    
        </section>
 
-       <InfoSection/>
+       <SliderSection/>
 
        </main>
         </>

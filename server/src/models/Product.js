@@ -40,9 +40,9 @@ class Product {
             const [rows] = await connection.query(`
                 SELECT
                     name,
-                    img_url,
+                    imgUrl1,
                     price,
-                    dsc,
+                    descr,
                     CASE WHEN stock = 0 THEN 'Out of Stock'
                     WHEN stock < 10 THEN 'Low Stock'
                     ELSE 'In Stock'
@@ -64,7 +64,7 @@ class Product {
         try {
             const [rows] = await connection.query(`
                 WITH rec AS (
-                    SELECT name, img, price, descr
+                    SELECT name, imgUrl1, price, descr
                     FROM product
                     WHERE price >= ?
                 )

@@ -4,15 +4,11 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 import SidebarFilter from "../SidebarFilter";
 import SortFilter from "../SortFilter/SortFilter";
 import { useOutletContext } from "react-router-dom";
+import { apiEndpoints } from "../../../utils/apiEndpoints";
 
 export default function ProductGrid() {
-  const isLocal = window.location.hostname === 'localhost';
-    const URLS = {
-        PRODUCTS: isLocal ? "http://localhost:5000/products" : `${process.env.REACT_APP_API_URL}/products`,
-    };
-    
 
-  const [data, isLoading, isError, error] = useFetchData({ url: URLS.PRODUCTS });
+  const [data, isLoading, isError, error] = useFetchData({ url: apiEndpoints.PRODUCTS });
   const [hoveredProduct, setHoveredProduct] = useState(null);
   const [display, setDisplay] = useState([]);
   const [priceFilter, setPriceFilter] = useState("all"); // either all, low, or high
@@ -75,6 +71,7 @@ export default function ProductGrid() {
         <Col xs={10} className="mx-auto">
           <Row className="justify-content-center g-4 ">
             <SortFilter setPriceFilter={setPriceFilter} />
+            
             {/* Display filtered products */}
             {display.length > 0 ? (
               display.map((product) => (

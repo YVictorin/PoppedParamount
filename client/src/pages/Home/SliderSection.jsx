@@ -6,7 +6,7 @@ import img2 from "/images/CinnamonApple-product-2.png"
 import img3 from "/images/Garlic-product-2.png"
 import img4 from "/images/PeanutButter-product-2.png"
 
-const InfoSection = () => {
+const SliderSection = () => {
     const IMAGES = [img1, img2, img3, img4]
     return (
         <>
@@ -27,4 +27,4 @@ const InfoSection = () => {
     );
 }
 
-export default InfoSection;
+export default SliderSection;

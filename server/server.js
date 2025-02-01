@@ -20,7 +20,7 @@ import accountRoute from "./src/routes/account.js"
 // const __dirname = path.dirname(__filename);
 
 const app = express();
-const PORT = process.env.SERVER_PORT || 3001;
+const SERVER_PORT = process.env.SERVER_PORT || 3001;
 
 app.use(cors());
 app.use(cookieParser());
@@ -31,14 +31,14 @@ app.use(bodyParser.urlencoded({ limit: "10mb", extended: false }));
 
 // use routers
 // app.use('/', indexRouter);
-app.use('/users', userRouter); 
-app.use('/products', productRouter);
-app.use('/supportBot', supportBotRouter)
+app.use('/api/users', userRouter); 
+app.use('/api/products', productRouter);
+app.use('/api/supportBot', supportBotRouter)
 
 //routes for handling user login
-app.use('/register', registerRoute)
-app.use('/login', loginRoute)
-app.use('/account', accountRoute)
+app.use('/api/register', registerRoute)
+app.use('/api/login', loginRoute)
+app.use('/api/account', accountRoute)
 
 //simple error-handling middleware for development, used by login related routes
 app.use((err, req, res, next) => {
@@ -50,6 +50,6 @@ app.get('/', (req, res) => {
     res.status(200).send({ "message": "Hello world" })
 })
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+app.listen(SERVER_PORT, () => {
+    console.log(`Server is running on port ${SERVER_PORT}`);
 });
