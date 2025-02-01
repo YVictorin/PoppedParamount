@@ -46,9 +46,10 @@ app.use((err, req, res, next) => {
     res.status(500).json({ message: "Internal server error", error: err.message });
 });
 
-app.get('/', (req, res) => {
-    res.status(200).send({ "message": "Hello world" })
-})
+// Redirect all requests to index.html for frontend routing (React, Vue, etc.)
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../client/dist", "index.html"));
+});
 
 app.listen(SERVER_PORT, () => {
     console.log(`Server is running on port ${SERVER_PORT}`);
