@@ -1,13 +1,17 @@
 {
-    "rewrites": [{
-        "source": "/(.*)",
-        "destination": "/index.html"
-    }],
-    "redirects": [
+    "builds": [
       {
-        "source": "/(.*)",
-        "destination": "/index.html",
-        "statusCode": 200
+        "src": "package.json",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "build"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/index.html"
       }
     ]
   }
