@@ -3,7 +3,7 @@
   "redirects": [
     {
       "source": "/(.*)",
-      "destination": "/index.html",
+      "destination": "https://popped-paramount.vercel.app",
       "statusCode": 200
     }
   ],
