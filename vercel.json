@@ -6,15 +6,8 @@
       "src": "server.js",
       "use": "@vercel/node",
       "config": {
-        "buildCommand": "cd client && npm run build && cd ..",
-        "startCommand": "cd server && npm run start && cd .."
-      }
-    },
-    {
-      "src": "client/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "client/dist"
+        "buildCommand": "npm run build",
+        "startCommand": "npm run start"
       }
     }
   ],
