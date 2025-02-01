@@ -11,6 +11,6 @@
       "src": "/api/(.*)",
       "dest": "/api/server.js"
     }
-  ],
-  "version": 2
+  ]
 }
+

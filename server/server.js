@@ -48,7 +48,7 @@ app.use((err, req, res, next) => {
 
 // Redirect all requests to index.html for frontend routing (React, Vue, etc.)
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../client/dist", "index.html"));
+    res.sendFile( path.resolve(__dirname, '../../../client/dist/index.html'));
 });
 
 app.listen(SERVER_PORT, () => {

@@ -45,7 +45,5 @@ app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "../client/dist", "index.html"));
 });
 
-// Export the app to Vercel serverless function
-export default function handler(req, res) {
-  app(req, res);
-}
+
+export default app;
