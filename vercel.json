@@ -6,7 +6,7 @@
       "src": "server.js",
       "use": "@vercel/node",
       "config": {
-        "buildCommand": "cd client && npm run build && cd ..",
+        "buildCommand": "cd client && npm run build && cd .. cd server",
         "startCommand": "npm run start"
       }
     }
