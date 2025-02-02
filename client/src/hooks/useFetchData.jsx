@@ -44,7 +44,7 @@ export default function useFetchData({ url, method = "GET", initialPostedData = 
                 }
 
 
-                const result = await response;
+                const result = await response.json();
                 console.log(result)
                 setData(result); // set data to the fetched result
             } catch (e) {
