@@ -22,8 +22,8 @@
   ],
   "routes": [
     {
-      "src": "/api/results",             
-      "dest": "/api/results.js"         
+      "src": "/api/server",             
+      "dest": "/api/server.js"         
     },
     {
       "src": "/(.*)",                
