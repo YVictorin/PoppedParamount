@@ -4,7 +4,7 @@ import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './global.css'
-import ErrorBoundary from './components/boundaries/ErrorBoundary.jsx';
+import ErrorBoundary from './components/boundaries/ErrorBoundary.jsx'
 
 createRoot(document.getElementById('root')).render(
  
