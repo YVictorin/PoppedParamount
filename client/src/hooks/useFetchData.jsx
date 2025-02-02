@@ -43,7 +43,9 @@ export default function useFetchData({ url, method = "GET", initialPostedData = 
                     throw new Error(`There was a fetching error: ${response.status}`);
                 }
 
+
                 const result = await response.json();
+                console.log(result)
                 setData(result); // set data to the fetched result
             } catch (e) {
                 setIsError(true); // set errors
