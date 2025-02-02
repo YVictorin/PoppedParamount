@@ -4,7 +4,7 @@
   "type": "module",
   "main": "server.js",
   "scripts": {
-    "build": "cd .. && cd client npm install",
+    "build": "echo \"No need for build in server\"",
     "devStart": "node --watch --experimental-sqlite --env-file=.env server.js"
   },
   "keywords": [],
