@@ -1,14 +1,8 @@
 {
-    "rewrites": [{
-        "source": "/(.*)",
-        "destination": "/dist/index.html"
-    }],
-    "redirects": [
-      {
-        "source": "/(.*)",
-        "destination": "/dist/index.html",
-        "statusCode": 200
-      }
-    ]
-  }
-  
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/dist/index.html"
+    }
+  ]
+}
