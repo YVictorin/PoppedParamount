@@ -5,7 +5,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import cors from "cors";
 
-// import indexRouter from "./src/routes/index.js";
+import indexRouter from "./src/routes/index.js";
 import userRouter from "./src/routes/users.js"; 
 import productRouter from "./src/routes/products.js";
 import supportBotRouter from "./src/routes/supportBotRoute.js"
@@ -30,7 +30,7 @@ app.use(bodyParser.urlencoded({ limit: "10mb", extended: false }));
 app.use(express.static(path.resolve(__dirname, '../client/dist')));
 
 // use routers
-// app.use('/', indexRouter);
+app.use('/', indexRouter);
 app.use('/api/users', userRouter); 
 app.use('/api/products', productRouter);
 app.use('/api/supportBot', supportBotRouter)
@@ -49,3 +49,6 @@ app.use((err, req, res, next) => {
 app.listen(SERVER_PORT, () => {
     console.log(`Server is running on port ${SERVER_PORT}`);
 });
+
+
+export default app;
