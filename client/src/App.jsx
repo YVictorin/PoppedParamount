@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { Routes, Route, Link } from 'react-router-dom'
 
-import Layout from './components/ui/Layout'
+import Layout from './components/common/Layout'
 
-import Modal from './components/ui/Modal'
+import Modal from './components/common/Modal'
 import Home from './pages/Home/index'
 import Products from './pages/Products/index'
 import Contact from './pages/Contact/index'
