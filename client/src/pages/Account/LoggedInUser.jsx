@@ -1,5 +1,5 @@
 import ResponsiveContainer from "../../components/ResponsiveContainer";
-import img1 from "../../../dist/images/account-page.jpg";
+import img1 from "../../../public/images/BuffaloWing.jpeg";
 import List from "../../components/List"
 import Scorecard from "../../components/Scorecard"
 
