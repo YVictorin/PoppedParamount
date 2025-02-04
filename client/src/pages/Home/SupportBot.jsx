@@ -6,13 +6,13 @@ import { useOutletContext } from "react-router-dom"
 import { apiEndpoints } from "../../utils/apiEndpoints";
 
 export default function SupportBot(){
-    const [ data , , , , , setPostedData] = useFetchData({ url: apiEndpoints.SUPPORT_BOT, method: "POST" });
+    const [ data , , , , , setPostedData ] = useFetchData({ url: apiEndpoints.SUPPORT_BOT, method: "POST" });
     const { isMobile } = useOutletContext()
 
 
     const [isOpen, setIsOpen] = useState(false);
     const [userMsg, setUserMsg] = useState("");
-    const [msgHistory, setMsgHistory] = useState([]); 
+    const [msgHistory, setMsgHistory] = useState([]) 
     const dialogRef = useRef(null)
     const inputRef = useRef(null)
     const responsesRef = useRef(null)

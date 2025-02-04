@@ -1,5 +1,5 @@
 import Container from 'react-bootstrap/Container';
-import ImageSlider from './ImageSlider';
+import ImageSlider from '../../components/ImageSlider';
 
 import img1 from "/images/home-hero.png";
 import img2 from "/images/CinnamonApple-product-2.png"
