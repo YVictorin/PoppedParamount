@@ -1,5 +1,5 @@
 import HeroSection from "../../components/HeroSection"
-import StackingCards from "./StackingCards"
+import StackingCards from "../../components/StackingCards"
 import SupportBot from "./SupportBot"
 
 export default function Home() {
