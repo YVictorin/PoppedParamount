@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
 
-export default function Navbar({ isContactPage }) {
+export default function Navbar({ isContactPage, isAccountPage }) {
     return !isContactPage ? (
-    
         <>
         <header>
         <div className="shipping-nav">
@@ -17,13 +16,16 @@ export default function Navbar({ isContactPage }) {
         </div>
         <nav id="logo-list">
             <ul className="logo-ul">
-                <li><Link to="/"><img className="logo" src="images/logo.png" alt=""></img></Link></li>
+                {/* hiding logo on account page */}
+                <li><Link to="/"><img className={!isAccountPage ? "logo" : "hidden"} src="images/logo.png" alt=""></img></Link></li>
+            
+
                     <li><Link id="products-page-link" to="/products">POPCORN FLAVORS</Link></li>
                     <li><Link to="/login">LOGIN</Link></li>
                     <li><Link to="/account">YOUR ACCOUNT</Link></li>
                     <li><Link to="/contact">CONTACT US</Link></li>
 
-                   
+                  
                     <li><span id="search-icon" className="material-symbols-outlined">search</span></li>
                     <li><span id="cart-icon" className="material-symbols-outlined">shopping_cart</span></li>
                     <li><span id="menu-icon" className="material-symbols-outlined">menu</span></li>

@@ -1,5 +1,5 @@
 import { Col } from "react-bootstrap";
 
-export default function MainContentColumn({ children }) {
-  return <Col xs={10} className="mx-auto">{children}</Col>;
+export default function MainContentColumn({ children, ...props }) {
+  return <Col {...props} xs={10} className="mx-auto">{children}</Col>;
 }

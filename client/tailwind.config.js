@@ -1,4 +1,6 @@
 import defaultColors from 'tailwindcss/colors';
+import tailwindcssTypography  from '@tailwindcss/typography';
+import { fontFamily } from 'tailwindcss/defaultTheme';
 
 const customColors = {
   ...defaultColors,
@@ -25,7 +27,10 @@ export default {
   theme: {
     extend: {
       colors: customColors,
-    },
+      fontFamily: {
+        "cursive": ["cursive", ...fontFamily.sans],
+      }
+    }
   },
-  plugins: [],
+  plugins: [tailwindcssTypography],
 };

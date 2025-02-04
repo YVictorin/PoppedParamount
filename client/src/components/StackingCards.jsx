@@ -1,5 +1,7 @@
-import SliderSection from "./SliderSection"
+import SliderSection from "../pages/Home/SliderSection"
 
+
+//move this into components and utilize props and state more
 const StackingCards = () => {
     return (
         <>

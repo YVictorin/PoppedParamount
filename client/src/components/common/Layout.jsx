@@ -12,6 +12,7 @@ const Layout = () => {
     const isMobile = windowWidth <= 753;
     const isProductPage = currentRoute.pathname.includes('/products')
     const isContactPage = currentRoute.pathname.includes('/contact')
+    const isAccountPage = currentRoute.pathname.includes('/account')
 
     useEffect(() => {
         const handleResize = () => {
@@ -28,7 +29,7 @@ const Layout = () => {
    
     return (
         <>
-        <Navbar isContactPage={isContactPage}/>
+        <Navbar isContactPage={isContactPage} isAccountPage={isAccountPage}/>
             <Outlet context={{ isMobile }}/>
         <Footer isProductPage={isProductPage} isMobile={isMobile}/>
        </>
