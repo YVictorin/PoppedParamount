@@ -12,10 +12,7 @@ const LoggedInUser = () => {
                 <h1 className="font-cursive text-white translate-y-[-23vh] translate-x-[-5%] text-6xl">Yonjou</h1>
             </div>
             <Scorecard name="Yonjou Victorin" level={50} pointsToSpend={120} pointsToLevelUp={100}/>
-
         </div>
-
-
 
         <ResponsiveContainer top="67%" >
             <div>
