@@ -1,7 +1,7 @@
 import ResponsiveContainer from "../../components/ResponsiveContainer";
 import img1 from "../../../dist/images/account-page.jpg";
 import List from "../../components/List"
-import Scorecard from "../../components/Scorecard";
+import Scorecard from "../../components/Scorecard"
 
 const LoggedInUser = () => {
     return (
