@@ -9,23 +9,17 @@
 
 ## Installation
 
-OS X & Linux:
+Linux, Mac & Windows:
 
 ```sh
-npm install my-crazy-module --save
+npm install 
 ```
 
-Windows:
+## Project overview
 
-```sh
-edit autoexec.bat
-```
+This project is an e-commerce website dedicated to selling gourmet popcorn in a wide variety of flavors. Popped Paramount features a user-friendly, responsive design and includes the following key pages: Home, Products, Login, Account, and Contact. This website is designed to provide an intuitive shopping experience while ensuring seamless navigation and great customer interaction through the supported customer service AI chatbot. 
 
-## Usage example
-
-A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
-
-_For more examples and usage, please refer to the [Wiki][wiki]._
+_For more information and details, please refer to the [Wiki][wiki]._
 
 ## Development setup
 
@@ -39,12 +33,12 @@ npm test
 ## Release History
 
 * 0.2.1
-    * CHANGE: Update docs (module code remains unchanged)
+    * CHANGE: Update docs 
 * 0.2.0
     * CHANGE: Remove `setDefaultXYZ()`
     * ADD: Add `init()`
 * 0.1.1
-    * FIX: Crash when calling `baz()` (Thanks @GenerousContributorName!)
+    * FIX: Crash when calling `baz()`
 * 0.1.0
     * The first proper release
     * CHANGE: Rename `foo()` to `bar()`
